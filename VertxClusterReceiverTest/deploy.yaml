@@ -1,0 +1,19 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vertx-cluster-receiver
+spec:
+  replicas: 1
+  strategy:
+   type: Rolling
+   rollingParams:
+     updatePeriodSeconds: 10
+     intervalSeconds: 20
+     timeoutSeconds: 600
+     maxUnavailable: 1
+     maxSurge: 1
+  template:
+    metadata:
+      labels:
+       component: vertx-cluster-discover-service
