@@ -6,6 +6,8 @@ Demo Vertx Cluster ready for execution on Kubernetes environment composed by two
 
 Both projects contain a DockerFile and a deploy.yaml for easy integration as kubernetes deployments.
 
+These two projects, form a two-node fully modular Vertx Cluster.
+
 
 
 ### Pre-requisites
